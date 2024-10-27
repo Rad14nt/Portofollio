@@ -10,7 +10,8 @@ import { BsMouse } from "react-icons/bs";
 const HeaderIntro: React.FC = () => {
   const { language } = useLanguage();
   const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { setTimeOfLastClick } = useActiveSectionContext();
+  // const { setActiveSection } = useActiveSectionContext();
 
   return (
     <section
@@ -47,7 +48,7 @@ const HeaderIntro: React.FC = () => {
             link={`#${button.name.toLocaleLowerCase()}`}
             buttoncolor={button.color}
             onClick={() => {
-              setActiveSection(button.name);
+              // setActiveSection(button.name);
               setTimeOfLastClick(Date.now());
             }}
           />

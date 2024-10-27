@@ -25,11 +25,6 @@ const Footer: React.FC = () => {
             key={index}
             target="_blank"
             rel="noopener noreferrer"
-            aria-current={
-              social.altimgname === "true"
-                ? social.altimgname + " button"
-                : social.altimgname + " button"
-            }
           >
             {typeof social.icon === "function" ? (
               <social.icon className={`stroke-orange`} />

@@ -43,7 +43,9 @@ import cleoicon from "../../assets/icons/cleoagicon.svg";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
-import {GoHome, GoPerson, GoMail, GoStack, GoProject, GoBriefcase} from "react-icons/go";
+import {GoHome, GoPerson, GoStack, GoProject, GoBriefcase} from "react-icons/go";
+
+// import {GoMail} from "react-icons/go";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 // import { FiLink } from "react-icons/fi";
 
