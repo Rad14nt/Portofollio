@@ -44,7 +44,8 @@ import wordpressicon from "../../assets/icons/wordpressicon.svg";
 
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import {GoHome, GoPerson, GoMail, GoStack, GoProject, GoBriefcase} from "react-icons/go";
-import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+// import { FiLink } from "react-icons/fi";
 
 
 export const headerIntroData = {
@@ -103,10 +104,6 @@ export const projectsData = [
 
     ],
     image: totalftix,
-    deploymenturl: "https://totalfitx.com",
-    githuburl: "https://github.com/yourusername/TotalFitX",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -117,9 +114,9 @@ export const projectsData = [
   {
     title: "Video Uploader",
     description:
-        "Eine umfassende Gesundheits- und Fitness-App, die es Nutzern ermöglicht, ihre Fitness- und Wellness-Ziele effizient zu erreichen. TotalFitX bietet ein zentrales Dashboard zur Erfassung von Kalorien, Schlaf, Workouts und Gesundheitsmetriken und weiteres. Entwickelt mit einen modernen Tech-Stack wie Java, Spring Boot, React, TypeScript und Docker. Diese Anwendung befindet sich noch in der Entwicklung.",
+        "Nachdem ich von der Brain-Shot AG gebeten wurde, eine Lösung für sie zu entwickeln, war dieses Projekt eine steile Lernkurve. Das Projekt wurde innerhalb von drei Wochen entworfen und abgeschlossen. Das Ziel war es, eine Benutzeroberfläche in Webflow zu implementieren, die es Lehrern ermöglicht, Videos zu einer externen API namens Bunny hochzuladen, welche anschließend auch das Webflow CMS aktualisiert. Aus Sicherheitsgründen habe ich eine API auf AWS erstellt, da Webflow nur clientseitig funktioniert. AWS wurde dann auch für rollenbasierte Authentifizierung verwendet.",
     description_EN:
-        "Having been asked by Brain-Shot AG to develop a solution for them, this project was a steep learning curve. The project was designed and completed in 3 weeks. The goal was to implement a UI into Webflow, that allowed Teachers to upload videos to an external API called Bunny, which afterwards would update the Webflow CMS aswell. For security purposes I created an API on AWS, since Webflow is client side only. AWS was then also used for role-based authentication ",
+        "Having been asked by Brain-Shot AG to develop a solution for them, this project was a steep learning curve. The project was designed and completed in 3 weeks. The goal was to implement a UI into Webflow, that allowed Teachers to upload videos to an external API called Bunny, which afterwards would update the Webflow CMS aswell. For security purposes I created an API on AWS, since Webflow is client side only. AWS was then also used for role-based authentication,",
     technologies: [
       { name: "AWS", icon: awsicon },
       { name: "JavaScript", icon: javascripticon },
@@ -132,10 +129,6 @@ export const projectsData = [
 
     ],
     image: totalftix,
-    deploymenturl: "https://totalfitx.com",
-    githuburl: "https://github.com/yourusername/TotalFitX",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -144,7 +137,7 @@ export const projectsData = [
     },
   },
   {
-    title: "TotalFitX",
+    title: "Digital Financing Solution",
     description:
         "Eine umfassende Gesundheits- und Fitness-App, die es Nutzern ermöglicht, ihre Fitness- und Wellness-Ziele effizient zu erreichen. TotalFitX bietet ein zentrales Dashboard zur Erfassung von Kalorien, Schlaf, Workouts und Gesundheitsmetriken und weiteres. Entwickelt mit einen modernen Tech-Stack wie Java, Spring Boot, React, TypeScript und Docker. Diese Anwendung befindet sich noch in der Entwicklung.",
     description_EN:
@@ -165,10 +158,6 @@ export const projectsData = [
 
     ],
     image: totalftix,
-    deploymenturl: "https://totalfitx.com",
-    githuburl: "https://github.com/yourusername/TotalFitX",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -369,7 +358,7 @@ export const navLinks = [
   { de: "Erfahrung", en: "Experience", hash: "#experience", icon: GoBriefcase },
   { de: "Projekte", en: "Projects", hash: "#projects", icon: GoProject },
   { de: "Über mich", en: "About me", hash: "#about-me", icon: GoPerson },
-  { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
+  // { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
 
 
@@ -399,8 +388,8 @@ export const sideBarLeftSocials = [
 export const quotesData = [
   {
     de: '"Es ist überhaupt nicht wichtig, es beim ersten Mal richtig zu machen. Es ist entscheidend, es beim letzten Mal richtig zu machen."',
-    en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Andrew Hunt",
+    en: `"The best way to predict the future is to create it."`,
+    author: "Abraham Lincoln",
   },
   {
     de: '"Das Web ist wie eine Leinwand und der Code ist die Farbe. Erschaffe dein Meisterwerk."',

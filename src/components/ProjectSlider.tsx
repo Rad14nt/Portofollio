@@ -1,6 +1,6 @@
 import bannerBg from "../assets/img/bannerbg.webp";
 import React, { useRef } from "react";
-import LiveTicker from "./ParallaxText";
+// import LiveTicker from "./ParallaxText";
 import { projectsData } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
@@ -178,7 +178,8 @@ const ProjectSlider: React.FC = () => {
             ))}
           </div>
         </div>
-        <LiveTicker />
+        {/*<LiveTicker />*/}
+        {/*  add github*/}
       </section>
       <ReactTooltip
         place="top"
