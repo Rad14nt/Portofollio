@@ -28,6 +28,8 @@ import javaicon from "../../assets/icons/javaicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
 import juniticon from "../../assets/icons/juniticon.svg";
 import totalftix from "../../assets/img/totalfitx.webp";
+import noimange from "../../assets/img/no image.webp";
+
 import droneshophome from "../../assets/img/droneshop/website.webp";
 import vercelicon from "../../assets/icons/vercelicon.svg";
 import gitlabicon from "../../assets/icons/gitlabicon.svg";
@@ -124,31 +126,6 @@ export const projectsData = [
     },
   },
   {
-    title: "Video Uploader",
-    description:
-        "Nachdem ich von der Brain-Shot AG gebeten wurde, eine Lösung für sie zu entwickeln, war dieses Projekt eine steile Lernkurve. Das Projekt wurde innerhalb von drei Wochen entworfen und abgeschlossen. Das Ziel war es, eine Benutzeroberfläche in Webflow zu implementieren, die es Lehrern ermöglicht, Videos zu einer externen API namens Bunny hochzuladen, welche anschließend auch das Webflow CMS aktualisiert. Aus Sicherheitsgründen habe ich eine API auf AWS erstellt, da Webflow nur clientseitig funktioniert. AWS wurde dann auch für rollenbasierte Authentifizierung verwendet.",
-    description_EN:
-        "Having been asked by Brain-Shot AG to develop a solution for them, this project was a steep learning curve. The project was designed and completed in 3 weeks. The goal was to implement a UI into Webflow, that allowed Teachers to upload videos to an external API called Bunny, which afterwards would update the Webflow CMS aswell. For security purposes I created an API on AWS, since Webflow is client side only. AWS was then also used for role-based authentication,",
-    technologies: [
-      { name: "AWS", icon: awsicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: htmlicon },
-      { name: "TypeScript", icon: cssicon },
-      { name: "Bunny API", icon: bunnyicon },
-      { name: "Wordpress", icon: wordpressicon},
-      { name: "HTML", icon: htmlicon},
-      { name: "CSS", icon: cssicon},
-
-    ],
-    image: totalftix,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#4CAF50",
-    },
-  },
-  {
     title: "Drone Webshop",
     description:
         "Eine E-Commerce-Website, die während meiner Berufsschulzeit am TBZ programmiert wurde. Dieses Projekt wurde mit Node.js entwickelt und umfasst einen Webshop, eine Admin-Konsole zum Hinzufügen von Produkten, Verwalten von Benutzern und Anzeigen von Verkaufsstatistiken sowie einen Backend-Server. Die Datenbank ist MongoDB und wird auf MongoDB Cloud Services gehostet. Das Projekt wurde ursprünglich auf GitLab veröffentlicht und später auf mein GitHub-Konto kopiert. Kürzlich habe ich es wiederbelebt, da es ein großer Erfolg in meiner frühen Karriere war.",
@@ -190,6 +167,31 @@ export const projectsData = [
       { name: "TypeORM", icon: typeormicon },
     ],
     image: digitalfinance,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#4CAF50",
+    },
+  },
+  {
+    title: "Video Uploader",
+    description:
+        "Nachdem ich von der Brain-Shot AG gebeten wurde, eine Lösung für sie zu entwickeln, war dieses Projekt eine steile Lernkurve. Das Projekt wurde innerhalb von drei Wochen entworfen und abgeschlossen. Das Ziel war es, eine Benutzeroberfläche in Webflow zu implementieren, die es Lehrern ermöglicht, Videos zu einer externen API namens Bunny hochzuladen, welche anschließend auch das Webflow CMS aktualisiert. Aus Sicherheitsgründen habe ich eine API auf AWS erstellt, da Webflow nur clientseitig funktioniert. AWS wurde dann auch für rollenbasierte Authentifizierung verwendet.",
+    description_EN:
+        "Having been asked by Brain-Shot AG to develop a solution for them, this project was a steep learning curve. The project was designed and completed in 3 weeks. The goal was to implement a UI into Webflow, that allowed Teachers to upload videos to an external API called Bunny, which afterwards would update the Webflow CMS aswell. For security purposes I created an API on AWS, since Webflow is client side only. AWS was then also used for role-based authentication,",
+    technologies: [
+      { name: "AWS", icon: awsicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: htmlicon },
+      { name: "TypeScript", icon: cssicon },
+      { name: "Bunny API", icon: bunnyicon },
+      { name: "Wordpress", icon: wordpressicon},
+      { name: "HTML", icon: htmlicon},
+      { name: "CSS", icon: cssicon},
+
+    ],
+    image: noimange,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -657,8 +659,8 @@ export const resumeData = [
       en: "Basic Education",
     },
     desc: {
-      de: "",
-      en: "",
+      de: "Primarschule, Gymnasium, Sekundarschule und 10. Schuljahr",
+      en: "Primary school, gymnasium, Sek and 10th year",
     },
   },
   {
