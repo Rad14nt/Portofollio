@@ -25,8 +25,20 @@ import flywayicon from "../../assets/icons/flywayicon.svg";
 import fluttericon from "../../assets/icons/fluttericon.svg";
 import nestjsicon from "../../assets/icons/nesticon.svg";
 import javaicon from "../../assets/icons/javaicon.svg";
+import mongodbicon from "../../assets/icons/mongoicon.svg";
 import juniticon from "../../assets/icons/juniticon.svg";
 import totalftix from "../../assets/img/totalfitx.webp";
+import noimange from "../../assets/img/no image.webp";
+
+import droneshophome from "../../assets/img/droneshop/website.webp";
+import vercelicon from "../../assets/icons/vercelicon.svg";
+import gitlabicon from "../../assets/icons/gitlabicon.svg";
+import docusignicon from "../../assets/icons/docusignicon.svg";
+import typeormicon from "../../assets/icons/typeormicon.svg";
+
+
+import digitalfinance from "../../assets/img/digitalfinance.webp";
+
 import profilepicture from "../img/me2.webp";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import bunnyicon from "../../assets/icons/bunnyicon.svg";
@@ -114,6 +126,55 @@ export const projectsData = [
     },
   },
   {
+    title: "Drone Webshop",
+    description:
+        "Eine E-Commerce-Website, die während meiner Berufsschulzeit am TBZ programmiert wurde. Dieses Projekt wurde mit Node.js entwickelt und umfasst einen Webshop, eine Admin-Konsole zum Hinzufügen von Produkten, Verwalten von Benutzern und Anzeigen von Verkaufsstatistiken sowie einen Backend-Server. Die Datenbank ist MongoDB und wird auf MongoDB Cloud Services gehostet. Das Projekt wurde ursprünglich auf GitLab veröffentlicht und später auf mein GitHub-Konto kopiert. Kürzlich habe ich es wiederbelebt, da es ein großer Erfolg in meiner frühen Karriere war.",
+    description_EN:
+        "An E-Commerce Website that was programmed during my vocational school TBZ. This project was done using Node.js. It consists of a Webshop, an Admin Console to add products, manage users, and see sales insights, and of course a Backend Server. The database is MongoDB and is deployed on MongoDB Cloud Services. This project was initially pushed to GitLab and later copied over to my GitHub account. I recently brought it back to life as it was a great achievement early in my career.",
+    technologies: [
+      { name: "NodeJs", icon: nodejsicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "HTML", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "MongoDB", icon: mongodbicon },
+      { name: "GitHub", icon: giticon },
+      { name: "GitLab", icon: gitlabicon },
+      { name: "Vercel", icon: vercelicon },
+
+    ],
+    image: droneshophome,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#4CAF50",
+    },
+  },
+  {
+    title: "Digital Financing Solution",
+    description:
+        "Ein internes Projekt der CLEO AG. Ziel des Projekts ist es, eine Backend-Lösung für Webshops zur Verfügung zu stellen, die schnelle Leasing-Bestätigungen durch Banken ermöglicht. Nachdem ein Leasing erstellt wurde, stellt das Backend die benötigten Kundeninformationen bereit, bei denen es sich um andere Firmen handelt, die kleinere Produkte kaufen möchten. Nach einer Finanzprüfung können die benötigten Unterschriften mit DocuSign angefordert und das Dokument an eine Bank zur Bestätigung gesendet werden.\n",
+    description_EN:
+        "An internal CLEO AG project. This goal of the project is to provide a backend for web shops to integrate. This backend would allow quick leasing validations by banks. After a leasing is created, the backend provides the customers principals, the customers in this case being other firms looking to buy smaller products, like peripherals. After a financial check is done, you can chose which principals need to sign the leasing document and our backend will automatically send signature requests using Docusign, and send the contract to a bank for validation after these steps are done.",
+    technologies: [
+      { name: "NextJS", icon: nextjsiconwhite },
+      { name: "TypeScript", icon: typescripticon },
+      { name: "TailwindCSS", icon: tailwindcssicon },
+      { name: "NestJs", icon: nestjsicon },
+      { name: "Docker", icon: dockericon },
+      { name: "PostgreSQL", icon: pqsqlicon },
+      { name: "Docusign", icon: docusignicon },
+      { name: "TypeORM", icon: typeormicon },
+    ],
+    image: digitalfinance,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#4CAF50",
+    },
+  },
+  {
     title: "Video Uploader",
     description:
         "Nachdem ich von der Brain-Shot AG gebeten wurde, eine Lösung für sie zu entwickeln, war dieses Projekt eine steile Lernkurve. Das Projekt wurde innerhalb von drei Wochen entworfen und abgeschlossen. Das Ziel war es, eine Benutzeroberfläche in Webflow zu implementieren, die es Lehrern ermöglicht, Videos zu einer externen API namens Bunny hochzuladen, welche anschließend auch das Webflow CMS aktualisiert. Aus Sicherheitsgründen habe ich eine API auf AWS erstellt, da Webflow nur clientseitig funktioniert. AWS wurde dann auch für rollenbasierte Authentifizierung verwendet.",
@@ -130,36 +191,7 @@ export const projectsData = [
       { name: "CSS", icon: cssicon},
 
     ],
-    image: totalftix,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#4CAF50",
-    },
-  },
-  {
-    title: "Digital Financing Solution",
-    description:
-        "Eine umfassende Gesundheits- und Fitness-App, die es Nutzern ermöglicht, ihre Fitness- und Wellness-Ziele effizient zu erreichen. TotalFitX bietet ein zentrales Dashboard zur Erfassung von Kalorien, Schlaf, Workouts und Gesundheitsmetriken und weiteres. Entwickelt mit einen modernen Tech-Stack wie Java, Spring Boot, React, TypeScript und Docker. Diese Anwendung befindet sich noch in der Entwicklung.",
-    description_EN:
-        "A comprehensive health and fitness app designed to help users efficiently reach their fitness and wellness goals. TotalFitX provides a centralized dashboard to track calories, sleep, workouts, health metrics and much more . Built with a modern tech stack including Java, Spring Boot, React, TypeScript, and Docker. This application is still under development.",
-    technologies: [
-      { name: "Java", icon: javaicon },
-      { name: "Spring Boot", icon: springbooticon },
-      { name: "React", icon: reacticon },
-      { name: "TypeScript", icon: typescripticon },
-      { name: "NextJS", icon: nextjsiconwhite },
-      { name: "Docker", icon: dockericon },
-      { name: "AWS", icon: awsicon },
-      { name: "PostgreSQL", icon: pqsqlicon },
-      { name: "Flyway", icon: flywayicon },
-      { name: "Flutter", icon: fluttericon },
-      { name: "JUnit", icon: juniticon },
-      { name: "TailwindCSS", icon: tailwindcssicon },
-
-    ],
-    image: totalftix,
+    image: noimange,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
@@ -218,7 +250,7 @@ export const skillsDataFrontendDevelopment = [
         color: "#DD0031",
       },
       {
-        title: 'nextjs',
+        title: 'Nextjs',
         hash: "#NextJS",
         icon: nextjsiconwhite,
         color: "#61DAFB",
@@ -389,7 +421,7 @@ export const sideBarLeftSocials = [
 
 export const quotesData = [
   {
-    de: '"Es ist überhaupt nicht wichtig, es beim ersten Mal richtig zu machen. Es ist entscheidend, es beim letzten Mal richtig zu machen."',
+    de: '"Die beste Möglichkeit, die Zukunft vorherzusagen, besteht darin, sie zu gestalten."',
     en: `"The best way to predict the future is to create it."`,
     author: "Abraham Lincoln",
   },
@@ -627,8 +659,8 @@ export const resumeData = [
       en: "Basic Education",
     },
     desc: {
-      de: "",
-      en: "",
+      de: "Primarschule, Gymnasium, Sekundarschule und 10. Schuljahr",
+      en: "Primary school, gymnasium, Sek and 10th year",
     },
   },
   {
