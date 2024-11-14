@@ -33,11 +33,6 @@ import noimange from "../../assets/img/no image.webp";
 import droneshophome from "../../assets/img/droneshop/website.webp";
 import vercelicon from "../../assets/icons/vercelicon.svg";
 import gitlabicon from "../../assets/icons/gitlabicon.svg";
-import docusignicon from "../../assets/icons/docusignicon.svg";
-import typeormicon from "../../assets/icons/typeormicon.svg";
-
-
-import digitalfinance from "../../assets/img/digitalfinance.webp";
 
 import profilepicture from "../img/me2.webp";
 import travelicon from "../../assets/icons/travel-icon.svg";
@@ -143,30 +138,6 @@ export const projectsData = [
 
     ],
     image: droneshophome,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#4CAF50",
-    },
-  },
-  {
-    title: "Digital Financing Solution",
-    description:
-        "Ein internes Projekt der CLEO AG. Ziel des Projekts ist es, eine Backend-Lösung für Webshops zur Verfügung zu stellen, die schnelle Leasing-Bestätigungen durch Banken ermöglicht. Nachdem ein Leasing erstellt wurde, stellt das Backend die benötigten Kundeninformationen bereit, bei denen es sich um andere Firmen handelt, die kleinere Produkte kaufen möchten. Nach einer Finanzprüfung können die benötigten Unterschriften mit DocuSign angefordert und das Dokument an eine Bank zur Bestätigung gesendet werden.\n",
-    description_EN:
-        "An internal CLEO AG project. This goal of the project is to provide a backend for web shops to integrate. This backend would allow quick leasing validations by banks. After a leasing is created, the backend provides the customers principals, the customers in this case being other firms looking to buy smaller products, like peripherals. After a financial check is done, you can chose which principals need to sign the leasing document and our backend will automatically send signature requests using Docusign, and send the contract to a bank for validation after these steps are done.",
-    technologies: [
-      { name: "NextJS", icon: nextjsiconwhite },
-      { name: "TypeScript", icon: typescripticon },
-      { name: "TailwindCSS", icon: tailwindcssicon },
-      { name: "NestJs", icon: nestjsicon },
-      { name: "Docker", icon: dockericon },
-      { name: "PostgreSQL", icon: pqsqlicon },
-      { name: "Docusign", icon: docusignicon },
-      { name: "TypeORM", icon: typeormicon },
-    ],
-    image: digitalfinance,
     colors: {
       main: "main-btn",
       second: "secondary-btn",
