@@ -8,6 +8,8 @@ import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import jesticon from "../../assets/icons/jesticon.svg";
 import gymicon from "../../assets/icons/gym-icon.svg";
 import communicationicon from "../../assets/icons/communicationicon.svg";
+import akad from "../../assets/icons/akad.svg";
+import eth from "../icons/ethicon.svg";
 import hobbyicon from "../../assets/icons/hobbyicon.svg";
 import journeyicon from "../../assets/icons/journeyicon.svg";
 import giticon from "../../assets/icons/giticon.svg";
@@ -18,7 +20,7 @@ import angularicon from "../../assets/icons/angularicon.svg";
 import springbooticon from "../../assets/icons/spring-booticon.svg";
 import pqsqlicon from "../../assets/icons/pqsqlicon.svg";
 import jenkinsicon from "../../assets/icons/jenkinsicon.svg";
-import phpicon from "../../assets/icons/phpicon.svg";
+import bmwicon from "../../assets/icons/bmwicon.svg";
 import kotlinicon from "../../assets/icons/kotlinicon.svg";
 import sqlicon from "../../assets/icons/sqlicon.svg";
 import flywayicon from "../../assets/icons/flywayicon.svg";
@@ -38,7 +40,6 @@ import profilepicture from "../img/me2.webp";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import bunnyicon from "../../assets/icons/bunnyicon.svg";
 import solidwhiteicon from "../../assets/icons/solid-white-icon.svg";
-import brainshoticon from "../../assets/icons/brainshoticon.svg";
 
 
 import bbcicon from "../../assets/icons/bbcicon.svg";
@@ -62,7 +63,7 @@ export const headerIntroData = {
     de: "Hi, ich bin Andrei",
     en: "Hi, I'm Andrei",
   },
-  subtitle: "Fullstack Developer @ CLEO AG",
+  subtitle: "Fullstack Developer @ ETH",
   description: {
     de: "Ich bin Andrei, ein Fullstack-Entwickler mit dem Ziel, meine Karriere voranzutreiben und an inspirierenden Projekten teilzunehmen. Hier präsentiere ich meine Arbeiten und meine Leidenschaft für die Entwicklung. Lassen Sie uns gemeinsam digitale Lösungen gestalten und die Zukunft formen!",
     en: "I'm Andrei, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for development. Let's shape digital solutions together and shape the future!",
@@ -102,7 +103,7 @@ export const projectsData = [
       { name: "Spring Boot", icon: springbooticon },
       { name: "React", icon: reacticon },
       { name: "TypeScript", icon: typescripticon },
-      { name: "NextJS", icon: nextjsiconwhite },
+      { name: "Next.js", icon: nextjsiconwhite },
       { name: "Docker", icon: dockericon },
       { name: "AWS", icon: awsicon },
       { name: "PostgreSQL", icon: pqsqlicon },
@@ -221,7 +222,7 @@ export const skillsDataFrontendDevelopment = [
         color: "#DD0031",
       },
       {
-        title: 'Nextjs',
+        title: 'next.js',
         hash: "#NextJS",
         icon: nextjsiconwhite,
         color: "#61DAFB",
@@ -269,12 +270,6 @@ export const skillsDataBackendDevelopment = [
         hash: "#NodeJS",
         icon: nodejsicon,
         color: "#83CD29",
-      },
-      {
-        title: "PHP",
-        hash: "#PHP",
-        icon: phpicon,
-        color: "#777BB4",
       },
       {
         title: "Kotlin",
@@ -586,22 +581,41 @@ export const resumeData = [
   {
     id: 1,
     category: "education",
+    logo: akad,
+    year: {
+      de: "Geplanter Start spät 2025",
+      en: "Planned Start Late 2025",
+    },
+    title: {
+      de: "Dipl. Wirtschaftsinformatiker/-in HF",
+      en: "Business Information Technology HF",
+    },
+    desc: {
+      de: "Akad Zürich",
+      en: "Akad Zürich",
+    },
+
+  },
+
+    {
+    id: 2,
+    category: "education",
     logo: tbzicon,
     year: {
       de: "2020 - 2024",
       en: "2020 - 2024",
     },
     title: {
-      de: "Berufsschule Applikationsentwickler",
-      en: "Vocational School for Application Development",
+      de: "Applikationsentwickler EFZ Lehre",
+      en: "Application-Developer EFZ Apprenticeship",
     },
     desc: {
-      de: "Berufsbegleitende Ausbildung während der Lehre.",
-      en: "Part-time vocational training during the apprenticeship.",
+      de: "Technische Berufsschule Zürich",
+      en: "Technische Berufsschule Zürich",
     },
   },
   {
-    id: 2,
+    id: 3,
     category: "education",
     logo: bbcicon,
     year: {
@@ -610,15 +624,15 @@ export const resumeData = [
     },
     title: {
       de: "Basislehrjahr Lehre",
-      en: "Basic Apprenticeship Year",
+      en: "Base Apprenticeship Year",
     },
     desc: {
-      de: "Basislehrjahr der Informatikerlehre.",
-      en: "Basic year of the IT apprenticeship.",
+      de: "Berfusbildungcenter Zürich",
+      en: "Berfusbildungcenter Zürich",
     },
   },
   {
-    id: 3,
+    id: 4,
     category: "education",
     logo: solidwhiteicon,
     year: {
@@ -635,12 +649,47 @@ export const resumeData = [
     },
   },
   {
-    id: 4,
+    id: 5,
+    category: "experience",
+    logo: eth,
+    year: {
+      de: "2025 - Aktuell",
+      en: "2025 - Present",
+    },
+    title: {
+      de: "ETH Zürich",
+      en: "ETH Zürich",
+    },
+    desc: {
+      de: "Full-Stack Entwickler",
+      en: "Full-Stack Developer",
+    },
+  },
+
+  {
+    id: 7,
+    category: "experience",
+    logo: bmwicon,
+    year: {
+      de: "2024 - 2024 50%",
+      en: "2024 - 2024 50%",
+    },
+    title: {
+      de: "BMW Schweiz - Consulting für Cleo AG",
+      en: "BMW Schweiz - Consulting for Cleo AG",
+    },
+    desc: {
+      de: "3. Level Support und Quality Assurnace",
+      en: "3. Level Support and Quality Assurnace",
+    },
+  },
+  {
+    id: 6,
     category: "experience",
     logo: cleoicon,
     year: {
-      de: "2024 - Aktuell",
-      en: "2024 - Present",
+      de: "2024 - 2024 50%",
+      en: "2024 - 2024 50%",
     },
     title: {
       de: "CLEO AG",
@@ -652,24 +701,7 @@ export const resumeData = [
     },
   },
   {
-    id: 5,
-    category: "experience",
-    logo: brainshoticon,
-    year: {
-      de: "2024 - 2024",
-      en: "2024 - 2024",
-    },
-    title: {
-      de: "Brain-Shot AG",
-      en: "Brain-Shot AG",
-    },
-    desc: {
-      de: "Full-Stack Entwickler - 4 Wochen Projekt",
-      en: "Full-Stack Developer - 4-week project",
-    },
-  },
-  {
-    id: 6,
+    id: 8,
     category: "experience",
     logo: generaliicon,
     year: {
