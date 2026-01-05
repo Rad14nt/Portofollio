@@ -8,7 +8,7 @@ import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import jesticon from "../../assets/icons/jesticon.svg";
 import gymicon from "../../assets/icons/gym-icon.svg";
 import communicationicon from "../../assets/icons/communicationicon.svg";
-import akad from "../../assets/icons/akad.svg";
+import wiss from "../../assets/icons/wiss.svg";
 import eth from "../icons/ethicon.svg";
 import hobbyicon from "../../assets/icons/hobbyicon.svg";
 import journeyicon from "../../assets/icons/journeyicon.svg";
@@ -581,18 +581,19 @@ export const resumeData = [
   {
     id: 1,
     category: "education",
-    logo: akad,
+    logo: wiss,
+
     year: {
-      de: "Geplanter Start spät 2025",
-      en: "Planned Start Late 2025",
+      de: "Mai 2026 - 2029",
+      en: "May 2026 - 2029",
     },
     title: {
-      de: "Dipl. Wirtschaftsinformatiker/-in HF",
-      en: "Business Information Technology HF",
+      de: "Dipl. Informatiker/in HF",
+      en: "Information Technology HF",
     },
     desc: {
-      de: "Akad Zürich",
-      en: "Akad Zürich",
+      de: "WISS Schulen für Wirtschaft Informatik Immobilien AG.",
+      en: "WISS Schulen für Wirtschaft Informatik Immobilien AG.",
     },
 
   },
@@ -671,8 +672,8 @@ export const resumeData = [
     category: "experience",
     logo: bmwicon,
     year: {
-      de: "2024 - 2024 50%",
-      en: "2024 - 2024 50%",
+      de: "2024 - 2025 50%",
+      en: "2024 - 2025 50%",
     },
     title: {
       de: "BMW Schweiz - Consulting für Cleo AG",
@@ -688,8 +689,8 @@ export const resumeData = [
     category: "experience",
     logo: cleoicon,
     year: {
-      de: "2024 - 2024 50%",
-      en: "2024 - 2024 50%",
+      de: "2024 - 2025 50%",
+      en: "2024 - 2025 50%",
     },
     title: {
       de: "CLEO AG",

@@ -3,15 +3,13 @@ import Button from "./Button";
 import RadialGradient from "./RadialGradient";
 import { headerIntroData } from "../assets/lib/data";
 import { useSectionInView } from "../assets/lib/hooks";
-import { useActiveSectionContext } from "../context/active-section-context";
 import { useLanguage } from "../context/language-context";
 import { BsMouse } from "react-icons/bs";
+import { sideBarRightMail } from "../assets/lib/data";
 
 const HeaderIntro: React.FC = () => {
   const { language } = useLanguage();
   const { ref } = useSectionInView("Home", 0.5);
-  const { setTimeOfLastClick } = useActiveSectionContext();
-  // const { setActiveSection } = useActiveSectionContext();
 
   return (
     <section
@@ -45,12 +43,8 @@ const HeaderIntro: React.FC = () => {
             key={index}
             label={language === "DE" ? button.label.de : button.label.en}
             iconSVG={button.icon}
-            link={`#${button.name.toLocaleLowerCase()}`}
+            link={sideBarRightMail.link}
             buttoncolor={button.color}
-            onClick={() => {
-              // setActiveSection(button.name);
-              setTimeOfLastClick(Date.now());
-            }}
           />
         ))}
       </div>
