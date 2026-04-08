@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import type { Swiper as SwiperCore } from "swiper";
 import { aboutMeData } from "../assets/lib/data";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +22,7 @@ const AboutMe: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const onAutoplayTimeLeft = (_s: any, time: number, progress: number) => {
+  const onAutoplayTimeLeft = (_s: SwiperCore, time: number, progress: number) => {
     if (progressCircle.current && progressContent.current) {
       progressCircle.current.style.setProperty(
         "--progress",
@@ -48,9 +49,9 @@ const AboutMe: React.FC = () => {
                   }}
               >
                 <p className="text-[--black] mb-6">
-                  <span className="text-orange">&lt;</span>
+                  <span className="text-[--orange]">&lt;</span>
                   {language === "DE" ? aboutMeData.title : aboutMeData.title_EN}
-                  <span className="text-orange">/&gt;</span>
+                  <span className="text-[--orange]">/&gt;</span>
                 </p>
 
                 <h2 className="text-[--black] text-left break-words">
@@ -86,7 +87,7 @@ const AboutMe: React.FC = () => {
                         <div>
                           <img
                               src={paragraph.icon}
-                              alt={paragraph.icon}
+                              alt={paragraph.title}
                               className="w-24"
                           />
                         </div>
@@ -97,8 +98,8 @@ const AboutMe: React.FC = () => {
                       <div className="flex flex-row gap-10 max-lg:flex-col">
                         <div className="flex flex-col gap-4 items-center justify-between -mt-10 -mb-10 max-lg:flex-row max-lg:m-0">
                           <p className="text-white">
-                            <span className="text-orange">&lt;</span>h3
-                            <span className="text-orange">/&gt;</span>
+                            <span className="text-[--orange]">&lt;</span>h3
+                            <span className="text-[--orange]">/&gt;</span>
                           </p>
                           <div className="flex justify-between items-center w-1 h-full max-lg:flex-row max-lg:w-[10rem] max-lg:bg-lightblue">
                             <div></div>
@@ -106,8 +107,8 @@ const AboutMe: React.FC = () => {
                             <div></div>
                           </div>
                           <p className="text-white">
-                            <span className="text-orange">&lt;</span>h3
-                            <span className="text-orange">/&gt;</span>
+                            <span className="text-[--orange]">&lt;</span>h3
+                            <span className="text-[--orange]">/&gt;</span>
                           </p>
                         </div>
                         <div>
@@ -120,7 +121,7 @@ const AboutMe: React.FC = () => {
                 ))}
               </Swiper>
               <div
-                  className="autoplay-progress absolute -right-32 -bottom-12 z-10 flex items-center justify-center font-bold text-orange text-4xl w-24 h-24 max-lg:w-16 max-lg:h-16 max-lg:text-3xl"
+                  className="autoplay-progress absolute -right-32 -bottom-12 z-10 flex items-center justify-center font-bold text-[--orange] text-4xl w-24 h-24 max-lg:w-16 max-lg:h-16 max-lg:text-3xl"
               >
                 <svg viewBox="0 0 48 48" ref={progressCircle}>
                   <circle cx="24" cy="24" r="20"></circle>

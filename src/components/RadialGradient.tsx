@@ -20,22 +20,23 @@ const RadialGradient: React.FC<RadialGradientProps> = ({
   const { theme } = useTheme();
 
   useEffect(() => {
+    let rafId: number | null = null;
     const handleMouseMove = (event: MouseEvent) => {
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-      const newMouseXPercentage = Math.round((event.pageX / windowWidth) * 100);
-      const newMouseYPercentage = Math.round(
-        (event.pageY / windowHeight) * 100
-      );
-
-      setMouseXPercentage(newMouseXPercentage);
-      setMouseYPercentage(newMouseYPercentage);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        setMouseXPercentage(Math.round((event.pageX / windowWidth) * 100));
+        setMouseYPercentage(Math.round((event.pageY / windowHeight) * 100));
+        rafId = null;
+      });
     };
 
     document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
   }, []);
 

@@ -35,17 +35,17 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({ title, data, theme }) => 
         <article
             className={`h-auto rounded-2xl p-16 pt-32 grid grid-cols-1 gap-10 relative z-10 max-lg:w-full max-lg:grid-cols-1 max-lg:p-8  max-lg:pt-32 ${
                 theme === "dark"
-                    ? "bg-blackblue dark-mode-shadow"
-                    : "bg-icewhite dark-shadow"
+                    ? "bg-[--blackblue] dark-mode-shadow"
+                    : "bg-[--icewhite] dark-shadow"
             }`}
         >
             <div
                 className={`absolute top-10 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-t-xl`}
             >
                 <p className="font-black text-5xl">
-                    <span className="text-orange">&lt;</span>
+                    <span className="text-[--orange]">&lt;</span>
                     {title}
-                    <span className="text-orange">/&gt;</span>
+                    <span className="text-[--orange]">/&gt;</span>
                 </p>
             </div>
             <div className="flex flex-col gap-6">

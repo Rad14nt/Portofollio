@@ -1,6 +1,5 @@
-// @ts-nocheck
-
 import { useRef, useState, useEffect } from "react";
+import type { ReactNode } from "react";
 import {
   motion,
   useScroll,
@@ -16,7 +15,7 @@ import { useLanguage } from "../context/language-context";
 import { sideBarLeftSocials, liveTickerData } from "../assets/lib/data";
 
 interface ParallaxProps {
-  children: any;
+  children: ReactNode;
   baseVelocity: number;
 }
 
@@ -38,7 +37,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(1);
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
 

@@ -3,8 +3,8 @@ import React from "react";
 interface Skill {
   title: string;
   hash: string;
-  icon?: any;
-  color?: any;
+  icon?: string | string[];
+  color?: string | string[];
 }
 
 interface SkillCategory {
@@ -18,29 +18,29 @@ interface SkillSectionProps {
 }
 
 const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
-  const getSkillIconSrc = (theme: string, skill: Skill) => {
-    if (
-      theme === "dark" &&
-      (skill.title.includes("Next") || skill.title.includes("Express"))
-    ) {
-      return skill.icon[1];
-    } else if (skill.title !== "Next.js" && skill.title !== "Express") {
-      return skill.icon;
+  const getSkillIconSrc = (theme: string, skill: Skill): string | undefined => {
+    if (!skill.icon) return undefined;
+    const isMultiVariant =
+      skill.title.includes("Next") || skill.title.includes("Express");
+    if (theme === "dark" && isMultiVariant) {
+      return Array.isArray(skill.icon) ? skill.icon[1] : skill.icon;
+    } else if (!isMultiVariant) {
+      return Array.isArray(skill.icon) ? skill.icon[0] : skill.icon;
     } else {
-      return skill.icon[0];
+      return Array.isArray(skill.icon) ? skill.icon[0] : skill.icon;
     }
   };
 
-  const getSkillColor = (theme: string, skill: Skill) => {
-    if (
-      theme === "dark" &&
-      (skill.title.includes("Next") || skill.title.includes("Express"))
-    ) {
-      return skill.color[1];
-    } else if (skill.title !== "Next.js" && skill.title !== "Express") {
-      return skill.color;
+  const getSkillColor = (theme: string, skill: Skill): string | undefined => {
+    if (!skill.color) return undefined;
+    const isMultiVariant =
+      skill.title.includes("Next") || skill.title.includes("Express");
+    if (theme === "dark" && isMultiVariant) {
+      return Array.isArray(skill.color) ? skill.color[1] : skill.color;
+    } else if (!isMultiVariant) {
+      return Array.isArray(skill.color) ? skill.color[0] : skill.color;
     } else {
-      return skill.color[0];
+      return Array.isArray(skill.color) ? skill.color[0] : skill.color;
     }
   };
 
@@ -88,6 +88,21 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
               "inherit"
             );
           }}
+          onFocus={(e) => {
+            e.currentTarget.style.animation = "pulse 2s infinite";
+            document.documentElement.style.setProperty(
+              "--box-shadow-color",
+              `${getSkillColor(theme, skill)}b3`
+            );
+          }}
+          onBlur={(e) => {
+            e.currentTarget.style.animation = "";
+            document.documentElement.style.setProperty(
+              "--box-shadow-color",
+              "inherit"
+            );
+          }}
+          tabIndex={0}
         >
           <img
             src={getSkillIconSrc(theme, skill)}

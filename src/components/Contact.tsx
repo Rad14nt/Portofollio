@@ -17,12 +17,10 @@ const Contact: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [cursor, setCursor] = useState<string>("");
   const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
   const { ref } = useSectionInView("About me");
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [error, setError] = useState<string | any>(null);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -33,33 +31,27 @@ const Contact: React.FC = () => {
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    setError(null);
-    console.log(error);
-
     e.preventDefault();
     const data = new FormData(e.currentTarget);
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
+      await axios.post(apiBaseUrl, data);
       if (language === "DE") {
         toast.success(toastMessages.successEmailSent.de);
       } else {
         toast.success(toastMessages.successEmailSent.en);
       }
-    } catch (error) {
-      console.log(error);
+    } catch {
       if (language === "DE") {
         toast.error(toastMessages.failedEmailSent.de);
       } else {
         toast.error(toastMessages.failedEmailSent.en);
       }
-      setError("An Error occured, try again later");
     }
   };
 
   const handleInputFocus = (fieldName: string) => {
-    setCursor(`${fieldName}${cursor}`);
+    setLastUpdatedField(fieldName);
   };
 
   const wordWrap = (
@@ -68,7 +60,7 @@ const Contact: React.FC = () => {
     indentation: string
   ) => {
     const words = text.split(" ");
-    let lines: string[] = [];
+    const lines: string[] = [];
     let currentLine = "";
 
     words.forEach((word) => {
@@ -143,33 +135,6 @@ Across the cosmos, a message for you:\n
 Wishing you stardust dreams,\n
 ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 \``;
-
-  //   const codeSnippet2 = `
-  // // 🚀 Initiating Quantum Email Transmission 🪐
-  // const launchEmail = async () => {
-  //   try {
-  //     const response = await fetch('send to emai',{
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: JSON.stringify({
-  //      sender,
-  //      recipient,
-  //      subject,
-  //      message
-  //     })
-  //    });
-
-  //    if (response.ok) {
-  //    console.log('🌌 Transmission successful!');
-  //    } else {
-  //    console.error('🌠 Cosmic glitch encountered...');
-  //    }
-  //   } catch (error) {
-  //   console.error('🌪 Quantum disturbance detected:', error);
-  //   }
-  // };
-  // // 🚀 Ready for Liftoff? 🛸
-  // launchEmail();`;
 
   return (
     <React.Fragment>
@@ -247,14 +212,8 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                     : message
                 }
                 required
-                onFocus={() => {
-                  handleInputFocus(input.name);
-                  setLastUpdatedField(input.name);
-                }}
-                onMouseEnter={() => {
-                  handleInputFocus(input.name);
-                  setLastUpdatedField(input.name);
-                }}
+                onFocus={() => handleInputFocus(input.name)}
+                onMouseEnter={() => handleInputFocus(input.name)}
                 onChange={handleInputChange}
                 className={`${
                   theme === "dark"
@@ -271,14 +230,8 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                   : `${contactData.textarea.placeholder.en}`
               }
               name={contactData.textarea.name}
-              onFocus={() => {
-                handleInputFocus(contactData.textarea.name);
-                setLastUpdatedField(contactData.textarea.name);
-              }}
-              onMouseEnter={() => {
-                handleInputFocus(contactData.textarea.name);
-                setLastUpdatedField(contactData.textarea.name);
-              }}
+              onFocus={() => handleInputFocus(contactData.textarea.name)}
+              onMouseEnter={() => handleInputFocus(contactData.textarea.name)}
               onChange={handleInputChange}
               className={`${
                 theme === "dark"

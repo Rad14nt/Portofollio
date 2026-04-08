@@ -36,9 +36,9 @@ const Resume: React.FC = () => {
                     }}
                 >
                     <p className="font-black mb-6">
-                        <span className="text-orange">&lt;</span>
+                        <span className="text-[--orange]">&lt;</span>
                         {language === "DE" ? resumeSectionData.title.de : resumeSectionData.title.en}
-                        <span className="text-orange">/&gt;</span>
+                        <span className="text-[--orange]">/&gt;</span>
                     </p>
                     <h2>
                         {language === "DE"
